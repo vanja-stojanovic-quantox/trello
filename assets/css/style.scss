@@ -1,0 +1,73 @@
+$colorDarkGrey: rgb(60, 60, 60);
+$colorLightGrey: #ececec;
+$colorGrey: #808080;
+$colorWhitesmoke: #fafafa;
+
+body {
+    background-color: lightblue;
+    justify-content: center;
+    display: flex;
+
+    .all-content {
+        display: grid;
+        margin: 50px auto 0 auto;
+        padding: 10px;
+        width: 220px;
+
+        @media only screen and (min-device-width: 768px) {
+            display: block;
+            width: 500px;
+        }
+
+        @media only screen and (min-device-width: 1440px) {
+            width: 980px;
+        }
+
+        .container {
+            min-height: 100px;
+            width: 220px;
+            margin: 10px;
+            display: inline-table;
+            background-color: $colorDarkGrey;
+            text-align: center;
+
+            h1 {
+                font-size: 16px;
+                margin-left: 5px;
+                color: $colorWhitesmoke;
+            }
+
+            .container-inner {
+                min-height: 20px;
+                padding: 5px;
+            }
+
+            .button-add {
+                float: right;
+                position: relative;
+                bottom: 5px;
+                margin-top: 15px;
+                background-color: $colorDarkGrey;
+                color: $colorWhitesmoke;
+                font-size: 10px;
+            }
+
+            .drag-box {
+                background-color: $colorGrey;
+                width: 200px;
+                padding: 5px;
+                margin-top: 3px;
+
+                .drag-box-content {
+                    margin-top: 15px;
+                    min-height: 20px;
+                    background-color: $colorLightGrey;
+                }
+
+                .dragging {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
